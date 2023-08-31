@@ -1,0 +1,76 @@
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#toll {
+  margin-top: -1%;
+}
+
+#input {
+  margin-right: auto;
+}
+
+#vehicle-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+#dropdown1,
+#dropdown1-sj,
+#dropdown1-rj {
+  margin-right: 20px;
+}
+
+#dropdown2,
+#dropdown2-sj,
+#dropdown2-rj {
+  margin-right: 20px;
+}
+
+#dropdown3,
+#dropdown3-sj,
+#dropdown3-rj {
+  margin-right: 20px;
+}
+
+#dropdown4,
+#dropdown4-sj,
+#dropdown4-rj {
+  margin-right: 20px;
+}
+
+#button {
+  margin-right: 20px;
+}
+
+#button:last-child {
+  margin-right: 0px;
+}
+
+#add-new-toll {
+  /* display: none; */
+  background-color: aquamarine;
+  width: 50%;
+}
+
+#add-vehicle {
+  display: none;
+  background-color: aquamarine;
+  width: 50%;
+}
+
+#close {
+  position: absolute;
+  top: 10%;
+  left: 47.5%;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}

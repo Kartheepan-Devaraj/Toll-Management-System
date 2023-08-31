@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div id="container">
+      <div id="toll"><h3>Toll Entries</h3></div>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <div id="dropdown">
+        <div id="dropdown-icon">
+          <img src="images\filter.png" alt="" height="20px" width="20px" />
+        </div>
+        <!-- <div id="dropdown-text">
+          <h3>All</h3>
+        </div> -->
+      </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div id="input"><input type="text" placeholder="search vehicle" /></div>
+      <div id="button">
+        <button onclick="addToll()">Add Vehicle Entry</button>
+      </div>
+      <div id="button">
+        <button onclick="addVehicle()">Add new toll</button>
+      </div>
+      <div id="button"><button>View all tools</button></div>
+    </div>
+
+    <!-- End navbar -->
+
+    <!-- Add new toll -->
+
+    <div id="add-new-toll">
+      <label><h2>Toll Name</h2></label><br />
+      <input
+        id="toll-name"
+        type="text"
+        placeholder="Enter toll name"
+        value="karur"
+      /><br /><br />
+      <label>Vehicle Fare Details</label><br /><br />
+      <button onclick="close()" id="close">
+        <img src="images\close.png" alt="" height="20px" width="20px" />
+      </button>
+
+      <!-- Dropdown-1 -->
+      <div id="vehicle-type">
+        <div id="vehicle-dropdown">
+          <select name="Select vehicle type" id="dropdown1">
+            <option value="Select Vehicle type" selected disabled>
+              <b>Select Vehicle type</b>
+            </option>
+            <option value="Car/Jeep/Van" selected>Car/Jeep/Van</option>
+            <option value="LCV">LCV</option>
+            <option value="Truck/Bus">Truck/Bus</option>
+            <option value="Heavy Vehicle">Heavy Vehicle</option>
+          </select>
+        </div>
+
+        <div>
+          <input
+            type="text"
+            name=""
+            id="dropdown1-sj"
+            placeholder="Single Journey"
+            value="10"
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            name=""
+            id="dropdown1-rj"
+            placeholder="Return Journey"
+            value="20"
+          />
+        </div>
+      </div>
+
+      <!-- Dropdown-1 -->
+
+      <!-- Dropdown-2 -->
+      <div id="vehicle-type">
+        <div id="vehicle-dropdown">
+          <select name="Select vehicle type" id="dropdown2">
+            <option value="Select Vehicle type" selected disabled>
+              <b>Select Vehicle type</b>
+            </option>
+            <option value="Car/Jeep/Van">Car/Jeep/Van</option>
+            <option value="LCV" selected>LCV</option>
+            <option value="Truck/Bus">Truck/Bus</option>
+            <option value="Heavy Vehicle">Heavy Vehicle</option>
+          </select>
+        </div>
+
+        <div>
+          <input
+            type="text"
+            name=""
+            id="dropdown2-sj"
+            placeholder="Single Journey"
+            value="30"
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            name=""
+            id="dropdown2-rj"
+            placeholder="Return Journey"
+            value="40"
+          />
+        </div>
+      </div>
+
+      <!-- Dropdown-2 -->
+
+      <!-- Dropdown-3 -->
+      <div id="vehicle-type">
+        <div id="vehicle-dropdown">
+          <select name="Select vehicle type" id="dropdown3">
+            <option value="Select Vehicle type" selected disabled>
+              <b>Select Vehicle type</b>
+            </option>
+            <option value="Car/Jeep/Van">Car/Jeep/Van</option>
+            <option value="LCV">LCV</option>
+            <option value="Truck/Bus" selected>Truck/Bus</option>
+            <option value="Heavy Vehicle">Heavy Vehicle</option>
+          </select>
+        </div>
+
+        <div>
+          <input
+            type="text"
+            name=""
+            id="dropdown3-sj"
+            placeholder="Single Journey"
+            value="50"
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            name=""
+            id="dropdown3-rj"
+            placeholder="Return Journey"
+            value="60"
+          />
+        </div>
+      </div>
+
+      <!-- Dropdown-3 -->
+
+      <!-- Dropdown-4 -->
+      <div id="vehicle-type">
+        <div id="vehicle-dropdown">
+          <select name="Select vehicle type" id="dropdown4">
+            <option value="Select Vehicle type" disabled>
+              <b>Select Vehicle type</b>
+            </option>
+            <option value="Car/Jeep/Van">Car/Jeep/Van</option>
+            <option value="LCV">LCV</option>
+            <option value="Truck/Bus">Truck/Bus</option>
+            <option value="Heavy Vehicle" selected>Heavy Vehicle</option>
+          </select>
+        </div>
+
+        <div>
+          <input
+            type="text"
+            name=""
+            id="dropdown4-sj"
+            placeholder="Single Journey"
+            value="70"
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            name=""
+            id="dropdown4-rj"
+            placeholder="Return Journey"
+            value="80"
+          />
+        </div>
+      </div>
+
+      <!-- Dropdown-4 -->
+      <input onclick="addTollName()" type="submit" value="Add details" />
+    </div>
+
+    <!-- Add new toll -->
+
+    <!-- Add vehicle details -->
+    <form id="add-vehicle">
+      <button onclick="close()" id="close">
+        <img src="images\close.png" alt="" height="20px" width="20px" />
+      </button>
+      <h2>Add Vehicle Details</h2>
+      <br />
+      <label for="Select toll name">Select toll name</label><br />
+      <select name="Select toll name" id="dropdownlist">
+        <option value="Toll Details" selected disabled>
+          <b>Toll Details</b>
+        </option></select
+      ><br /><br />
+
+      <label for="Select Vehicle Details">Select Vehicle Details</label><br />
+      <select id="dropdown-vehicle">
+        <option value="Select Vehicle type" selected disabled>
+          <b>Select Vehicle type</b>
+        </option>
+        <option value="Car/Jeep/Van">Car/Jeep/Van</option>
+        <option value="LCV">LCV</option>
+        <option value="Truck/Bus">Truck/Bus</option>
+        <option value="Heavy Vehicle">Heavy Vehicle</option></select
+      ><br /><br />
+
+      <label for="Vehicle Number">Vehicle Number</label><br />
+      <input
+        type="text"
+        id="number"
+        placeholder="Enter Vehicle Number"
+      /><br /><br />
+      <label for="Tariff">Tariff</label><br />
+      <input type="text" placeholder="Tariff Amount" /><br />
+      <button id="calculate" onclick="fair()">calculate Fair</button
+      ><br /><br />
+      <input onclick="vehicletable()" type="submit" value="Add Vehicle" />
+    </form>
+
+    <!-- Add vehicle details -->
+    <!-- <table id="vehicleTable">
+      <tr>
+        <th>Vehicle Type</th>
+        <th>Vehicle Number</th>
+        <th>Date/Time</th>
+        <th>Toll Name</th>
+        <th>Tariff</th>
+      </tr>
+    </table> -->
+
+    <table id="vehicleTable">
+      <tr>
+        <th>Vehicle Type</th>
+        <th>Vehicle Number</th>
+        <th>Date/Time</th>
+        <th>Toll Name</th>
+        <th>Tariff</th>
+      </tr>
+    </table>
+    <br /><br /><br />
+
+    <table id="tollTable">
+      <tr>
+        <th>Toll Name</th>
+        <th>Car/Jeep/Van</th>
+        <th>LCV</th>
+        <th>Truck/Bus</th>
+        <th>Heavy Vehicle</th>
+      </tr>
+    </table>
+    <!-- <td>
+      <th>
+        Vehicle Type
+      </th>
+    </td> -->
+    <script src="script.js"></script>
+  </body>
+</html>
